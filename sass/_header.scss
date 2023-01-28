@@ -18,4 +18,13 @@ header {
       }
     }
   }
+
+  @include responsive(1000px) {
+    .container {
+      justify-content: center;
+    }
+    nav {
+      display: none;
+    }
+  }
 }

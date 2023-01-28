@@ -1,11 +1,12 @@
 .login-section {
   padding-top: 14.9rem;
-  margin-bottom: 19.3rem;
+  margin-bottom: 5.9rem;
   .container {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 3.2rem;
   }
+  // Image Side
   .hero-container {
     height: 100%;
     position: relative;
@@ -29,6 +30,7 @@
     }
   }
 
+  // Form Side
   .form-container {
     @include flex(column, start, center);
     background-color: $white;
@@ -98,6 +100,23 @@
       font-size: 1.4rem;
       line-height: 1.7rem;
       text-decoration: underline;
+    }
+  }
+
+  @include responsive(1000px) {
+    padding-top: 5.9rem;
+
+    .container {
+      grid-template-columns: 1fr;
+    }
+    .hero-container {
+      display: none;
+    }
+    .form-container {
+      form {
+        width: 100%;
+        max-width: 50rem;
+      }
     }
   }
 }

@@ -52,7 +52,7 @@ button {
   src: url("../fonts/SFPRODISPLAYBOLD.OTF") format("truetype"); }
 
 .btn {
-  padding: 1.5rem 10rem;
+  padding: 1.5rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,10 +88,15 @@ header {
       transition: color 0.2s ease-in; }
       header nav ul li a:hover {
         color: #ed2590; }
+  @media screen and (max-width: 1000px) {
+    header .container {
+      justify-content: center; }
+    header nav {
+      display: none; } }
 
 .login-section {
   padding-top: 14.9rem;
-  margin-bottom: 19.3rem; }
+  margin-bottom: 5.9rem; }
   .login-section .container {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -176,6 +181,16 @@ header {
       font-size: 1.4rem;
       line-height: 1.7rem;
       text-decoration: underline; }
+  @media screen and (max-width: 1000px) {
+    .login-section {
+      padding-top: 5.9rem; }
+      .login-section .container {
+        grid-template-columns: 1fr; }
+      .login-section .hero-container {
+        display: none; }
+      .login-section .form-container form {
+        width: 100%;
+        max-width: 50rem; } }
 
 footer {
   background-color: #fdfeff;
