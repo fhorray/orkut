@@ -36,6 +36,9 @@ a:target {
   padding: 0 1.5rem;
   margin: 0 auto; }
 
+.hero-img-animation {
+  opacity: 0; }
+
 @font-face {
   font-family: "SF Regular";
   src: url("../fonts/SFPRODISPLAYREGULAR.OTF") format("truetype"); }
@@ -157,7 +160,8 @@ header {
     .login-section .hero-container img {
       height: 100%;
       object-fit: cover;
-      border-radius: 1.6rem; }
+      border-radius: 1.6rem;
+      transition: opacity 0.5s ease-in-out; }
     .login-section .hero-container p {
       width: 100%;
       max-width: 61.9rem;
