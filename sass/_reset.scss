@@ -30,6 +30,7 @@ body {
   background-color: $blue-light;
 }
 
-button {
-  cursor: pointer;
+a:target {
+  color: $pink;
+  font-family: "SF Bold";
 }

@@ -1,9 +1,11 @@
+// Login header
 header {
   padding: 3rem 0;
   background-color: $white;
   .container {
     @include flex(row, space-between, center);
   }
+
   nav {
     ul {
       @include flex(row, space-between, center);
@@ -27,4 +29,27 @@ header {
       display: none;
     }
   }
+  // Your Profile Styles
+  .profile {
+    @include flex(row, space-between, center);
+    gap: 1.3rem;
+    img {
+      max-width: 4rem;
+      border-radius: 50%;
+    }
+  }
+
+  input[type="search"] {
+    width: 100%;
+    max-width: 35.5rem;
+    padding: 1rem 0;
+    padding-left: 4rem;
+    padding-right: 1rem;
+    border-radius: 0.8rem;
+    background: url("../img/search-icon.svg") no-repeat;
+    background-color: #eff3f8;
+    background-position: 1rem 1rem;
+  }
 }
+
+// Feed header
