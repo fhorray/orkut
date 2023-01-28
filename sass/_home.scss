@@ -1,5 +1,6 @@
 .login-section {
   padding-top: 14.9rem;
+  margin-bottom: 19.3rem;
   .container {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -98,5 +99,20 @@
       line-height: 1.7rem;
       text-decoration: underline;
     }
+  }
+}
+
+footer {
+  background-color: $white;
+  padding: 1.2rem;
+  .container {
+    @include flex(row, center, center);
+  }
+  p,
+  a {
+    color: $pink;
+  }
+  a {
+    font-weight: 600;
   }
 }

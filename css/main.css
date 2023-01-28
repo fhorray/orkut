@@ -90,7 +90,8 @@ header {
         color: #ed2590; }
 
 .login-section {
-  padding-top: 14.9rem; }
+  padding-top: 14.9rem;
+  margin-bottom: 19.3rem; }
   .login-section .container {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -175,3 +176,17 @@ header {
       font-size: 1.4rem;
       line-height: 1.7rem;
       text-decoration: underline; }
+
+footer {
+  background-color: #fdfeff;
+  padding: 1.2rem; }
+  footer .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+  footer p,
+  footer a {
+    color: #ed2590; }
+  footer a {
+    font-weight: 600; }
