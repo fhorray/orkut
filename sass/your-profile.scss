@@ -1,13 +1,11 @@
 main {
   margin-top: 8rem;
+  margin-bottom: 4.4rem;
   .container {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 3.2rem;
-  }
-  section {
-    background-color: #eee;
   }
 
   .profile-pic {
@@ -51,57 +49,198 @@ main {
     }
   }
 
-  .rapports {
-    width: 100%;
+  .profile-info {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    padding: 2.4rem;
+    background-color: #fff;
+    border-radius: 1.6rem;
+    .container {
+      @include flex(column, start, start);
+    }
 
-    //
-    &__friends {
-      width: 100%;
-      height: 100%;
-      padding: 2.4rem;
-      background-color: #fff;
-      border-radius: 1.6rem;
+    h2 {
+      font-family: "SF Medium";
+      font-weight: 500;
+      font-size: 2.6rem;
+      line-height: 3.1rem;
+      color: #4b4b4b;
+      margin-bottom: 2.5rem;
+    }
+    .phrase {
+      background-color: #eff3f8;
+      padding: 1.2rem;
+      border-radius: 1rem;
+      margin-bottom: 3.2rem;
+      position: relative;
 
-      &__info {
-        @include flex(row, space-between, center);
-        margin-bottom: 3.2rem;
+      p {
+        color: $dark-light;
+        font-family: "SF Regular";
+        font-size: 1.6rem;
+      }
+      &::before {
+        content: "";
+        background: url("../img/triangle-before.svg") no-repeat;
+        width: 1.7rem;
+        height: 1.7rem;
+        display: block;
+        position: absolute;
+        top: -1.1rem;
+        left: 2.1rem;
+      }
+    }
 
-        span,
-        a {
-          font-family: "SF Medium";
-          font-weight: 500;
-          font-size: 1.6rem;
-          line-height: 2.4rem;
+    .profile-categories {
+      @include flex(row, start, start);
+      gap: 3.5rem;
+      margin-bottom: 3.2rem;
+      li {
+        @include flex(column, start, start);
+        .icons {
+          @include flex(row, center, start);
+          gap: 0.6rem;
         }
-        span {
+      }
+    }
+
+    .profile-info {
+      @include flex(column, start, start);
+      gap: 2.4rem;
+      padding: 0;
+      li {
+        @include flex(row, start, start);
+        gap: 1.2rem;
+      }
+    }
+  }
+
+  // Rapports
+  .rapports__friends {
+    width: 100%;
+    padding: 2.4rem;
+    margin-bottom: 2.7rem;
+    background-color: #fff;
+    border-radius: 1.6rem;
+
+    &__info {
+      @include flex(row, space-between, center);
+      margin-bottom: 3.2rem;
+
+      span,
+      a {
+        font-family: "SF Medium";
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+      }
+      span {
+        color: #4b4b4b;
+      }
+      a {
+        color: $pink;
+      }
+    }
+    ul {
+      @include flex(row, center, center);
+      flex-wrap: wrap;
+      gap: 3.2rem;
+      width: 100%;
+      li {
+        @include flex(column, center, center);
+
+        img {
+          max-width: 5rem;
+          margin-bottom: 0.8rem;
+        }
+        h3 {
+          font-family: "SF Regular";
+          font-size: 1.2rem;
+          line-height: 1.7rem;
           color: #4b4b4b;
         }
-        a {
-          color: $pink;
-        }
       }
-      ul {
-        @include flex(row, center, center);
-        flex-wrap: wrap;
-        gap: 3.2rem;
-        width: 100%;
-        li {
-          @include flex(column, center, center);
+    }
+    img {
+      display: inline-block;
+    }
+  }
+  .rapports__communities {
+    width: 100%;
+    padding: 2.4rem;
+    background-color: #fff;
+    border-radius: 1.6rem;
+    grid-column: 3;
+    grid-row: 2;
 
-          img {
-            max-width: 5rem;
-            margin-bottom: 0.8rem;
-          }
-          h3 {
-            font-family: "SF Regular";
-            font-size: 1.2rem;
-            line-height: 1.7rem;
-            color: #4b4b4b;
-          }
+    &__info {
+      @include flex(row, space-between, center);
+      margin-bottom: 3.2rem;
+
+      span,
+      a {
+        font-family: "SF Medium";
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+      }
+      span {
+        color: #4b4b4b;
+      }
+      a {
+        color: $pink;
+      }
+    }
+    ul {
+      @include flex(row, center, center);
+      flex-wrap: wrap;
+      gap: 3.2rem;
+      width: 100%;
+      li {
+        @include flex(column, center, center);
+
+        img {
+          max-width: 5rem;
+          margin-bottom: 0.8rem;
+        }
+        h3 {
+          font-family: "SF Regular";
+          font-size: 1.2rem;
+          line-height: 1.7rem;
+          color: #4b4b4b;
         }
       }
-      img {
-        display: inline-block;
+    }
+    img {
+      display: inline-block;
+    }
+  }
+
+  // Profile Tags
+  .profile-tags {
+    @include flex(column, start, start);
+    gap: 2.3rem;
+    li {
+      @include flex(row, start, center);
+      gap: 1.6rem;
+      a {
+        padding: 0.5rem 1.5rem;
+        background-color: transparent;
+        border: 1px solid $pink;
+        border-radius: 100rem;
+        color: $dark-light;
+        transition: all 0.2s ease-out;
+        &:hover {
+          background-color: $pink;
+          color: #fff;
+        }
+      }
+
+      .see-more {
+        background-color: transparent;
+        border: none;
+        color: $pink;
+        font-family: "SF Medium";
       }
     }
   }
