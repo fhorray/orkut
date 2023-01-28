@@ -21,14 +21,6 @@ header {
     }
   }
 
-  @include responsive(1000px) {
-    .container {
-      justify-content: center;
-    }
-    nav {
-      display: none;
-    }
-  }
   // Your Profile Styles
   .profile {
     @include flex(row, space-between, center);
@@ -49,5 +41,45 @@ header {
     background: url("../img/search-icon.svg") no-repeat;
     background-color: #eff3f8;
     background-position: 1rem 1rem;
+  }
+
+  @include responsive(1100px) {
+    .container {
+      justify-content: center;
+    }
+    input[type="search"] {
+      display: none;
+    }
+    nav {
+      display: none;
+    }
+    .profile {
+      display: none;
+    }
+  }
+  @include responsive(1000px) {
+    .container {
+      justify-content: center;
+    }
+    nav {
+      display: none;
+    }
+  }
+
+  @include responsive(500px) {
+    .container {
+      @include flex(row, space-between, center);
+    }
+    .profile {
+      display: flex;
+      h2 {
+        display: none;
+      }
+    }
+    .profile-info {
+      li {
+        flex-wrap: wrap;
+      }
+    }
   }
 }

@@ -8,6 +8,10 @@ main {
     gap: 3.2rem;
   }
 
+  input[type="search"] {
+    display: none;
+  }
+
   .profile-pic {
     height: 100%;
     width: 100%;
@@ -27,6 +31,7 @@ main {
       span {
         color: #4b4b4b;
         line-height: 2.4rem;
+        text-align: center;
       }
       h1 {
         font-family: "SF Medium";
@@ -55,6 +60,7 @@ main {
     padding: 2.4rem;
     background-color: #fff;
     border-radius: 1.6rem;
+    margin-bottom: 2.4rem;
     .container {
       @include flex(column, start, start);
     }
@@ -104,7 +110,7 @@ main {
       }
     }
 
-    .profile-info {
+    .profile-about {
       @include flex(column, start, start);
       gap: 2.4rem;
       padding: 0;
@@ -223,9 +229,12 @@ main {
   .profile-tags {
     @include flex(column, start, start);
     gap: 2.3rem;
+    flex-wrap: wrap;
     li {
       @include flex(row, start, center);
       gap: 1.6rem;
+      flex-wrap: wrap;
+
       a {
         padding: 0.5rem 1.5rem;
         background-color: transparent;
@@ -244,6 +253,48 @@ main {
         border: none;
         color: $pink;
         font-family: "SF Medium";
+      }
+    }
+  }
+
+  @include responsive(1100px) {
+    margin-top: 4rem;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input[type="search"] {
+      display: block;
+      width: 100%;
+      padding: 1rem 0;
+      padding-left: 4rem;
+      padding-right: 1rem;
+      border-radius: 0.8rem;
+      background: url("../img/search-icon.svg") no-repeat;
+      background-color: #fff;
+      background-position: 1rem 1rem;
+    }
+
+    .profile-info {
+      .profile-tags {
+        li {
+          gap: 0.5rem;
+          a {
+            flex-grow: 2;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  @include responsive(500px) {
+    .profile-info {
+      .profile-about {
+        li {
+          flex-wrap: wrap;
+        }
       }
     }
   }

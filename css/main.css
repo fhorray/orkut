@@ -98,11 +98,6 @@ header {
       transition: color 0.2s ease-in; }
       header nav ul li a:hover {
         color: #ed2590; }
-  @media screen and (max-width: 1000px) {
-    header .container {
-      justify-content: center; }
-    header nav {
-      display: none; } }
   header .profile {
     display: flex;
     flex-direction: row;
@@ -122,6 +117,32 @@ header {
     background: url("../img/search-icon.svg") no-repeat;
     background-color: #eff3f8;
     background-position: 1rem 1rem; }
+  @media screen and (max-width: 1100px) {
+    header .container {
+      justify-content: center; }
+    header input[type="search"] {
+      display: none; }
+    header nav {
+      display: none; }
+    header .profile {
+      display: none; } }
+  @media screen and (max-width: 1000px) {
+    header .container {
+      justify-content: center; }
+    header nav {
+      display: none; } }
+  @media screen and (max-width: 500px) {
+    header .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center; }
+    header .profile {
+      display: flex; }
+      header .profile h2 {
+        display: none; }
+    header .profile-info li {
+      flex-wrap: wrap; } }
 
 .login-section {
   padding-top: 10rem;
@@ -247,6 +268,8 @@ main {
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 3.2rem; }
+  main input[type="search"] {
+    display: none; }
   main .profile-pic {
     height: 100%;
     width: 100%; }
@@ -266,7 +289,8 @@ main {
       main .profile-pic__container h1,
       main .profile-pic__container span {
         color: #4b4b4b;
-        line-height: 2.4rem; }
+        line-height: 2.4rem;
+        text-align: center; }
       main .profile-pic__container h1 {
         font-family: "SF Medium";
         margin: 2.2rem 0;
@@ -286,7 +310,8 @@ main {
     grid-row: 1 / 3;
     padding: 2.4rem;
     background-color: #fff;
-    border-radius: 1.6rem; }
+    border-radius: 1.6rem;
+    margin-bottom: 2.4rem; }
     main .profile-info .container {
       display: flex;
       flex-direction: column;
@@ -336,14 +361,14 @@ main {
           justify-content: center;
           align-items: start;
           gap: 0.6rem; }
-    main .profile-info .profile-info {
+    main .profile-info .profile-about {
       display: flex;
       flex-direction: column;
       justify-content: start;
       align-items: start;
       gap: 2.4rem;
       padding: 0; }
-      main .profile-info .profile-info li {
+      main .profile-info .profile-about li {
         display: flex;
         flex-direction: row;
         justify-content: start;
@@ -448,13 +473,15 @@ main {
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    gap: 2.3rem; }
+    gap: 2.3rem;
+    flex-wrap: wrap; }
     main .profile-tags li {
       display: flex;
       flex-direction: row;
       justify-content: start;
       align-items: center;
-      gap: 1.6rem; }
+      gap: 1.6rem;
+      flex-wrap: wrap; }
       main .profile-tags li a {
         padding: 0.5rem 1.5rem;
         background-color: transparent;
@@ -470,3 +497,27 @@ main {
         border: none;
         color: #ed2590;
         font-family: "SF Medium"; }
+  @media screen and (max-width: 1100px) {
+    main {
+      margin-top: 4rem; }
+      main .container {
+        display: flex;
+        flex-direction: column; }
+      main input[type="search"] {
+        display: block;
+        width: 100%;
+        padding: 1rem 0;
+        padding-left: 4rem;
+        padding-right: 1rem;
+        border-radius: 0.8rem;
+        background: url("../img/search-icon.svg") no-repeat;
+        background-color: #fff;
+        background-position: 1rem 1rem; }
+      main .profile-info .profile-tags li {
+        gap: 0.5rem; }
+        main .profile-info .profile-tags li a {
+          flex-grow: 2;
+          text-align: center; } }
+  @media screen and (max-width: 500px) {
+    main .profile-info .profile-about li {
+      flex-wrap: wrap; } }
