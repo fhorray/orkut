@@ -1,5 +1,5 @@
 .login-section {
-  padding-top: 14.9rem;
+  padding-top: 10rem;
   margin-bottom: 5.9rem;
   .container {
     display: grid;
@@ -122,8 +122,13 @@
 }
 
 footer {
+  width: 100%;
   background-color: $white;
   padding: 1.2rem;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+
   .container {
     @include flex(row, center, center);
   }

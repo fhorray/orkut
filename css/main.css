@@ -124,7 +124,7 @@ header {
     background-position: 1rem 1rem; }
 
 .login-section {
-  padding-top: 14.9rem;
+  padding-top: 10rem;
   margin-bottom: 5.9rem; }
   .login-section .container {
     display: grid;
@@ -222,8 +222,12 @@ header {
         max-width: 50rem; } }
 
 footer {
+  width: 100%;
   background-color: #fdfeff;
-  padding: 1.2rem; }
+  padding: 1.2rem;
+  position: fixed;
+  bottom: 0;
+  text-align: center; }
   footer .container {
     display: flex;
     flex-direction: row;
@@ -347,10 +351,11 @@ main {
         gap: 1.2rem; }
   main .rapports__friends {
     width: 100%;
+    height: 100%;
     padding: 2.4rem;
-    margin-bottom: 2.7rem;
     background-color: #fff;
-    border-radius: 1.6rem; }
+    border-radius: 1.6rem;
+    align-self: center; }
     main .rapports__friends__info {
       display: flex;
       flex-direction: row;
@@ -392,9 +397,11 @@ main {
       display: inline-block; }
   main .rapports__communities {
     width: 100%;
+    height: 100%;
     padding: 2.4rem;
     background-color: #fff;
     border-radius: 1.6rem;
+    align-self: center;
     grid-column: 3;
     grid-row: 2; }
     main .rapports__communities__info {
