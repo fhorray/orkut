@@ -11,7 +11,7 @@
   font-family: "Inter", sans-serif;
   font-size: 1.6rem;
   line-height: 150%;
-  color: $grey-600;
+  color: $gray;
 }
 
 html {
@@ -27,6 +27,7 @@ img {
 html,
 body {
   overflow-x: hidden;
+  background-color: $blue-light;
 }
 
 button {

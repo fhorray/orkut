@@ -1,0 +1,21 @@
+header {
+  padding: 3rem 0;
+  background-color: $white;
+  .container {
+    @include flex(row, space-between, center);
+  }
+  nav {
+    ul {
+      @include flex(row, space-between, center);
+      gap: 4rem;
+      li {
+        a {
+          transition: color 0.2s ease-in;
+          &:hover {
+            color: $pink;
+          }
+        }
+      }
+    }
+  }
+}
